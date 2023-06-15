@@ -110,7 +110,7 @@ def is_asg_scaled(asg_name, desired_capacity):
     )
     actual_instances = response['AutoScalingGroups'][0]['Instances']
     if len(actual_instances) != desired_capacity:
-        logger.info('Asg {} does not have enough running instances to proceed'.format(asg_name))
+        logger.info('Asg {} does not have the correct number of running instances to proceed'.format(asg_name))
         logger.info('Actual instances: {} Desired instances: {}'.format(
             len(actual_instances),
             desired_capacity)
