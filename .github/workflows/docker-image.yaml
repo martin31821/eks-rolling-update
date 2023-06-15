@@ -54,4 +54,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           build-args: |
             "TARGET=${{ matrix.image }}"
-            "VERSION=${{ version }}"
+            "VERSION=${{ env.GITHUB_REF_NAME }}"
